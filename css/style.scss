@@ -1,0 +1,64 @@
+#chat{
+    position: fixed;
+    bottom: 95px;
+    right: 30px;
+    max-width: 350px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px  solid yellow;
+    opacity: 1;
+    visibility: visible;
+    &.active{
+        opacity:0;
+        visibility: hidden;
+
+    }
+    header{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 50px;
+        background: yellow;
+        text-align: center;
+        color: green;
+    }
+    main{
+        height: 260px;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        .message{
+            padding: 10px;
+            margin: 15px 5px;
+            width: 51%;
+            border-radius: 8px;
+            position: relative;
+            .time{
+                position: absolute;
+                top: 100%;
+                right: 15px;
+                font-size: 0.9em;
+            }
+            &.user{
+                float: right;
+                background: rgb(54, 199, 54);
+                color: #000;
+            }
+            &.admin{
+                float: left;
+                background: rgb(247, 247, 120);
+            }
+        }
+    }
+}
+
+
+#chat-mini{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: green;
+        padding: 15px;
+        border-radius: 50%;
+        svg{
+            fill:#fff;
+        }
+    }
